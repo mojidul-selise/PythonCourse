@@ -1,0 +1,75 @@
+def greeting(messge) :
+    return f"Hello {messge}"
+
+result = greeting("World")
+print(result)  # Output: "Hello World"
+
+def sum(a, b) :
+    return a + b
+
+result = sum(5, 3)
+print(result)  # Output: 8
+
+#keyword arguments
+def student_info(name, age) :
+    return f"Name: {name}, Age: {age}"
+
+result = student_info(age=20, name="Alice")
+print(result)  # Output: "Name: Alice, Age: 20"
+
+#lambda function
+square = lambda x: x ** 2
+result = square(5)
+print(result)  # Output: 25
+
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = list(map(lambda x: x ** 2, numbers))
+print(squared_numbers)  # Output: [1, 4, 9, 16, 25]
+
+#recusion
+def factorial(n) :
+    if n == 0 or n == 1 :
+        return 1
+    else :
+        return n * factorial(n - 1)
+
+result = factorial(5)
+print(result)  # Output: 120
+
+#sum of first n natural numbers
+def sum_of_natural_numbers(n) :
+    if n < 0 :
+        return "Negative number does not have a sum of natural numbers"
+    elif n == 0 :
+        return 0
+    else :
+        sum = 0
+        for x in range(n + 1) :
+            sum += x
+        return sum
+result = sum_of_natural_numbers(5)
+print(result)  # Output: 15
+
+#get all even numbers from a list
+def get_even_numbers(numbers) :
+    even_numbers = []
+    for num in numbers :
+        if num % 2 == 0 :
+            even_numbers.append(num)
+    return even_numbers
+numbers = [1, 2, 3, 4, 5, 6]
+result = get_even_numbers(numbers)
+print(result)  # Output: [2, 4, 6]
+
+#get all odd numbers from a list
+def get_odd_numbers(numbers) :
+    odd_numbers = []
+    for num in numbers :
+        if num % 2 != 0 :
+            odd_numbers.append(num)
+    return odd_numbers
+numbers = [1, 2, 3, 4, 5, 6]
+result = get_odd_numbers(numbers)
+print(result)  # Output: [1, 3, 5]
+
+

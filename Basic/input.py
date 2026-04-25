@@ -1,0 +1,2 @@
+name = input("Please enter your name: ")  # This will prompt the user to enter their name and store it in the variable 'name'.
+print("Hello, " + name + "! Welcome to Python programming.")  # This will greet
